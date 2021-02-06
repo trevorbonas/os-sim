@@ -1,0 +1,66 @@
+sid: semaphore id, pid: process id
+
+     Parameters	                     Operation
+
+C: (priority level)		Create a process and 
+				put it on the approp-
+				riate ready Q.
+
+F: None				Copy the currently ru-
+				nning process and put 
+				it on the ready Q cor-
+				responding to the ori-
+				ginal process' 
+				priority. Attempting to
+				Fork the "init" process 
+				should fail.
+
+K: (Process id (pid))		Kill the named process
+				and remove it from the 
+				system.
+
+E: None				Kill the currently run-
+				ning process.
+
+Q: None				Time quantum of running
+				process expires.
+
+S: (pid) (message)		Send a message to another
+				process - block until 
+				reply.
+
+R: None				Receive a message - block
+				until one arrives
+
+Y: (pid) (message)		Unblocks sender and deliv-
+				ers reply
+
+N: (sid) (value)		Initialize the named semap-
+				hore with the value given.
+				ID's can take a value from
+				0 to 4. This can only be 
+				done once for a semaphore 
+				- subsequent attempts result
+				in error.
+
+P: (sid)			Execute the semaphore P ope-
+				ration on behalf of the run-
+				ning process. You can assume
+				sempahores IDs numbered 0
+				through 4.					
+
+V: (sid)			Execute the semaphore V ope-
+				ration on behalf of the run-
+				ning process. You can assume
+				sempahores IDs numbered 0 
+				through 4.
+
+I: (pid)			Dump complete state informa-
+				tion of process to screen.
+
+T: None				Display all process queues
+				and their contents.
+
+H: None				Show all commands.
+
+!: None				Show readme.
